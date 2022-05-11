@@ -30,7 +30,17 @@ let StaffDetails = () => {
     } else {
         return (
             <ul>
-                {items.map((r) => (<li key={r.id}><img src={r.avatar} /></li>))}
+                {items.map((r) => (<li key={r.id}>
+                    <div>
+                        <b>{r.first_name} - {r.last_name}</b>
+                    </div>
+                    <div>
+                        Email - {r.email}
+                    </div>
+                    <div>
+                        <img src={r.avatar} />
+                    </div>
+                </li>))}
             </ul>
         );
     }
